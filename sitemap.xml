@@ -61,6 +61,24 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://apptivegrid.github.io/get-apptiveteams</loc>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://apptivegrid.github.io/apptiveteams-doku</loc>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://apptivegrid.github.io/en/apptiveteams-docs</loc>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://apptivegrid.github.io/impressum</loc>
     
     <changefreq>yearly</changefreq>
