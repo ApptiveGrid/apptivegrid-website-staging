@@ -1,0 +1,355 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Vereinsverwaltung digitalisieren: Mitgliederverwaltung mit ApptiveGrid aufbauen</title><meta name="description" content="Von der Excel-Liste zur echten Vereinsdatenbank: Wie Sie Mitglieder, Abteilungen und Beiträge strukturiert verwalten, Aufnahmeanträge automatisch erfassen und dabei DSGVO-konform bleiben."><meta name="robots" content="noindex, nofollow"><link rel="canonical" href="https://apptivegrid.github.io/apptivegrid-website-staging/en/post/vereinsverwaltung-digitalisieren/"><link rel="alternate" hreflang="en" href="https://apptivegrid.github.io/apptivegrid-website-staging/en/post/vereinsverwaltung-digitalisieren/"><link rel="alternate" hreflang="de" href="https://apptivegrid.github.io/apptivegrid-website-staging/post/vereinsverwaltung-digitalisieren/"><link rel="alternate" hreflang="x-default" href="https://apptivegrid.github.io/apptivegrid-website-staging/post/vereinsverwaltung-digitalisieren/"><!-- Open Graph --><meta property="og:title" content="Vereinsverwaltung digitalisieren: Mitgliederverwaltung mit ApptiveGrid aufbauen"><meta property="og:description" content="Von der Excel-Liste zur echten Vereinsdatenbank: Wie Sie Mitglieder, Abteilungen und Beiträge strukturiert verwalten, Aufnahmeanträge automatisch erfassen und dabei DSGVO-konform bleiben."><meta property="og:url" content="https://apptivegrid.github.io/apptivegrid-website-staging/en/post/vereinsverwaltung-digitalisieren/"><meta property="og:image" content="https://apptivegrid.github.io/og-default.png"><meta property="og:type" content="website"><meta property="og:locale" content="en_US"><meta property="og:site_name" content="ApptiveGrid"><!-- Twitter Card --><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Vereinsverwaltung digitalisieren: Mitgliederverwaltung mit ApptiveGrid aufbauen"><meta name="twitter:description" content="Von der Excel-Liste zur echten Vereinsdatenbank: Wie Sie Mitglieder, Abteilungen und Beiträge strukturiert verwalten, Aufnahmeanträge automatisch erfassen und dabei DSGVO-konform bleiben."><meta name="twitter:image" content="https://apptivegrid.github.io/og-default.png"><!-- Favicon --><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="icon" type="image/png" href="/favicon.png"><!-- Sitemap --><link rel="sitemap" href="/sitemap.xml"><link rel="stylesheet" href="/apptivegrid-website-staging/_astro/abuse.BEpLLBeq.css">
+<link rel="stylesheet" href="/apptivegrid-website-staging/_astro/abuse.WB6XtpC4.css"><script type="module">const e=document.getElementById("mobile-menu-btn"),n=document.getElementById("mobile-menu");e?.addEventListener("click",()=>{n?.classList.toggle("hidden")});
+</script></head> <body class="flex flex-col min-h-screen bg-white"> <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-gray-100"> <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8"> <div class="flex items-center justify-between h-16"> <!-- Logo --> <a href="/apptivegrid-website-staging/en/" class="flex items-center shrink-0"> <img src="/apptivegrid-website-staging/logo-light.svg" alt="ApptiveGrid" class="h-8 w-auto max-w-none" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"> <span class="text-xl font-bold text-brand-700" style="display:none">ApptiveGrid</span> </a> <!-- Desktop Nav --> <div class="hidden lg:flex items-center gap-1"> <a href="/apptivegrid-website-staging/en/features" class="px-4 py-2 rounded-lg text-sm font-medium transition-colors text-gray-600 hover:text-gray-900 hover:bg-gray-50"> Platform </a> <!-- Solutions Dropdown --> <div class="relative group"> <button class="px-4 py-2 rounded-lg text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 transition-colors flex items-center gap-1"> Solutions <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class=""><path d="m6 9 6 6 6-6"/></svg> </button> <div class="absolute top-full left-0 mt-1 w-56 bg-white rounded-xl shadow-lg border border-gray-100 py-1 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">  <a href="/apptivegrid-website-staging/en/consulting" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Consulting</a> <a href="/apptivegrid-website-staging/en/employee-app" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Employee App</a> </div> </div> <!-- Resources Dropdown --> <div class="relative group"> <button class="px-4 py-2 rounded-lg text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 transition-colors flex items-center gap-1"> Resources <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class=""><path d="m6 9 6 6 6-6"/></svg> </button> <div class="absolute top-full left-0 mt-1 w-48 bg-white rounded-xl shadow-lg border border-gray-100 py-1 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200"> <a href="/apptivegrid-website-staging/en/blog" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Blog</a>  <a href="https://intercom.help/apptivegrid/de/" target="_blank" rel="noopener" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Documentation</a> <a href="/apptivegrid-website-staging/en/tutorials" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Video Tutorials</a> </div> </div> <a href="/apptivegrid-website-staging/en/pricing" class="px-4 py-2 rounded-lg text-sm font-medium transition-colors text-gray-600 hover:text-gray-900 hover:bg-gray-50"> Pricing </a> </div> <!-- CTA Buttons + Language Switcher --> <div class="hidden lg:flex items-center gap-3"> <!-- Language Switcher --> <div class="flex items-center text-sm font-medium border border-gray-200 rounded-lg overflow-hidden"> <a href="/apptivegrid-website-staging/post/vereinsverwaltung-digitalisieren" class="px-2.5 py-1 transition-colors text-gray-500 hover:bg-gray-50">DE</a> <a href="#" class="px-2.5 py-1 transition-colors bg-brand-600 text-white">EN</a> </div> <a href="https://app.apptivegrid.de" class="text-sm font-medium text-gray-600 hover:text-gray-900"> Log in </a> <a href="https://app.apptivegrid.de/register" class="btn-primary text-sm py-2 px-4 whitespace-nowrap"> Get started free </a> </div> <!-- Mobile Menu Button --> <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-lg text-gray-600 hover:bg-gray-50" aria-label="Open menu"> <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class=""><path d="M3 12h18M3 6h18M3 18h18"/></svg> </button> </div> <!-- Mobile Menu --> <div id="mobile-menu" class="hidden lg:hidden pb-4 border-t border-gray-100 mt-2 pt-4"> <div class="flex flex-col gap-1"> <a href="/apptivegrid-website-staging/en/features" class="px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 rounded-lg">Platform</a>  <a href="/apptivegrid-website-staging/en/consulting" class="px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 rounded-lg">Consulting</a> <a href="/apptivegrid-website-staging/en/employee-app" class="px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 rounded-lg">Employee App</a> <a href="/apptivegrid-website-staging/en/blog" class="px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 rounded-lg">Blog</a> <a href="/apptivegrid-website-staging/en/tutorials" class="px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 rounded-lg">Video Tutorials</a> <a href="/apptivegrid-website-staging/en/pricing" class="px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 rounded-lg">Pricing</a> <div class="border-t border-gray-100 my-2"></div> <div class="flex items-center gap-2 px-3 py-2"> <a href="/apptivegrid-website-staging/post/vereinsverwaltung-digitalisieren" class="text-sm font-medium px-3 py-1 rounded text-gray-600">DE</a> <a href="#" class="text-sm font-medium px-3 py-1 rounded bg-brand-600 text-white">EN</a> </div> <div class="border-t border-gray-100 my-2"></div> <a href="https://app.apptivegrid.de" class="px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 rounded-lg">Log in</a> <a href="https://app.apptivegrid.de/register" class="btn-primary text-sm mt-1 text-center">Get started free</a> </div> </div> </nav> </header>  <main class="flex-1">  <article> <!-- Header --> <header class="bg-gradient-to-br from-gray-900 to-brand-900 text-white py-16"> <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8"> <div class="flex flex-wrap gap-2 mb-4"> <span class="text-xs font-medium px-2 py-0.5 rounded-full bg-blue-100 text-blue-700"> Usecase </span><span class="text-xs font-medium px-2 py-0.5 rounded-full bg-green-100 text-green-700"> Digitalisierung </span> </div> <h1 class="text-3xl md:text-4xl font-bold leading-tight">Vereinsverwaltung digitalisieren: Mitgliederverwaltung mit ApptiveGrid aufbauen</h1> <p class="mt-4 text-lg text-gray-300">Von der Excel-Liste zur echten Vereinsdatenbank: Wie Sie Mitglieder, Abteilungen und Beiträge strukturiert verwalten, Aufnahmeanträge automatisch erfassen und dabei DSGVO-konform bleiben.</p> <div class="mt-6 flex items-center gap-4 text-sm text-gray-400"> <span>Christian Denker</span> <span>·</span> <time datetime="2026-08-22T00:00:00.000Z"> August 22, 2026 </time>  <span>·</span> <span>10 min read</span>  </div> </div> </header> <!-- Language notice --> <div class="bg-blue-50 border-b border-blue-100"> <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center gap-2 text-sm text-blue-700"> <svg class="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"> <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path> </svg>
+This article is currently available in German only.
+</div> </div> <!-- Content --> <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12"> <div class="prose prose-gray max-w-none
+        prose-headings:text-gray-900
+        prose-h2:text-2xl prose-h2:font-bold prose-h2:mt-10 prose-h2:mb-4
+        prose-h3:text-xl prose-h3:font-semibold prose-h3:mt-8 prose-h3:mb-3
+        prose-p:text-gray-700 prose-p:leading-relaxed prose-p:mb-4
+        prose-a:text-brand-600 prose-a:no-underline hover:prose-a:underline
+        prose-strong:text-gray-900
+        prose-ul:my-4 prose-li:text-gray-700
+        prose-table:block prose-table:overflow-x-auto prose-table:border-collapse prose-th:bg-gray-50 prose-th:px-4 prose-th:py-2 prose-th:text-left prose-td:px-4 prose-td:py-2 prose-td:border-b prose-td:border-gray-100
+      "> <p>In den meisten Vereinen sieht die Mitgliederverwaltung so aus: Eine Excel-Datei auf dem Laptop des Kassenwarts. Eine zweite, leicht abweichende Version beim Schriftführer. Die Abteilungsleiter führen eigene Listen für ihre Gruppen. Und wenn jemand umzieht, erfährt es der Verein, wenn die Beitragsrechnung zurückkommt.</p>
+<p>Das funktioniert – bis es das nicht mehr tut.</p>
+<p>Spätestens wenn ein Mitglied in drei Abteilungen aktiv ist, wenn Beitragssätze sich unterscheiden, wenn ein Vorstandswechsel ansteht oder wenn jemand nach Artikel 15 DSGVO Auskunft über seine gespeicherten Daten verlangt, zeigt sich: Eine Tabellenkalkulation ist kein Vereinsverwaltungssystem. Sie ist eine Liste, die so tut als ob.</p>
+<p>Dieser Beitrag zeigt Schritt für Schritt, wie Sie mit ApptiveGrid eine echte Vereinsdatenbank aufbauen – ohne Programmierung, ohne eigenen Server und ohne dass jemand im Vorstand Datenbankexperte sein muss.</p>
+<h2 id="was-eine-vereinsverwaltung-wirklich-leisten-muss">Was eine Vereinsverwaltung wirklich leisten muss</h2>
+<p>Bevor wir Felder anlegen, lohnt ein Blick auf die Anforderungen. Eine tragfähige Vereinsverwaltung muss:</p>
+<ul>
+<li><strong>Stammdaten zentral halten</strong> – eine Wahrheit, nicht fünf Versionen</li>
+<li><strong>Mehrfachzugehörigkeiten abbilden</strong> – ein Mitglied, mehrere Abteilungen, unterschiedliche Rollen</li>
+<li><strong>Ein- und Austritte nachvollziehbar dokumentieren</strong> – inklusive Historie</li>
+<li><strong>Beiträge und Beitragsarten verwalten</strong> – Ermäßigungen, Familienbeiträge, Fördermitgliedschaften</li>
+<li><strong>Neuaufnahmen ohne Abtippen erfassen</strong> – der Antrag soll direkt in der Datenbank landen</li>
+<li><strong>Zugriffsrechte differenzieren</strong> – der Abteilungsleiter braucht seine Gruppe, nicht die Bankverbindungen aller Mitglieder</li>
+<li><strong>DSGVO-konform sein</strong> – auch und gerade im Ehrenamt</li>
+</ul>
+<p>Der letzte Punkt wird gerne unterschätzt. Für die DSGVO ist ein Verein eine verantwortliche Stelle wie jedes Unternehmen. Ein Sportverein verarbeitet dabei häufig sogar Gesundheitsdaten – etwa wenn Atteste oder Einschränkungen dokumentiert werden.</p>
+<h2 id="das-datenmodell-drei-tabellen-statt-einer">Das Datenmodell: drei Tabellen statt einer</h2>
+<p>Der entscheidende Unterschied zur Excel-Liste liegt in der Struktur. In einer Tabelle steht alles nebeneinander. In einer Datenbank steht jede Information genau einmal – und wird verknüpft.</p>
+<p>Für einen typischen Verein brauchen Sie drei Grids:</p>
+<p><strong>1. Mitglieder</strong> – die Stammdaten jeder Person. Jede Person genau einmal, egal in wie vielen Abteilungen sie aktiv ist.</p>
+<p><strong>2. Abteilungen</strong> – die Organisationseinheiten des Vereins: Fußball, Turnen, Schwimmen, Schach.</p>
+<p><strong>3. Mitgliedschaften</strong> – die Verbindung zwischen beiden. Hier steht, wer seit wann in welcher Abteilung welche Rolle hat.</p>
+<p>Warum die dritte Tabelle? Weil ein Mitglied mehreren Abteilungen angehören kann und jede Abteilung viele Mitglieder hat. In Excel führt das zu Spalten wie „Abteilung 1”, „Abteilung 2”, „Abteilung 3” – und spätestens beim vierten Eintrag zum Chaos. Eine eigene Tabelle für die Zugehörigkeit löst das sauber und wächst beliebig mit.</p>
+<p>Ein Mitglied, das im Fußball spielt, im Schwimmen trainiert und die Schachabteilung leitet, hat schlicht drei Zeilen in „Mitgliedschaften” – und trotzdem nur einen Stammdatensatz.</p>
+<h2 id="schritt-1-space-und-mitglieder-grid-anlegen">Schritt 1: Space und Mitglieder-Grid anlegen</h2>
+<p>Legen Sie in ApptiveGrid zunächst einen Space für Ihren Verein an. Ein Space ist der organisatorische Container – vergleichbar mit einem Aktenschrank, in dem alle Grids Ihres Vereins liegen.</p>
+<p>Erstellen Sie darin ein Grid mit dem Namen <strong>Mitglieder</strong> und legen Sie folgende Felder an:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Feld</th><th>Typ</th><th>Hinweis</th></tr></thead><tbody><tr><td>Mitgliedsnummer</td><td>Zahl</td><td>Eindeutig, dient als Schlüssel</td></tr><tr><td>Vorname</td><td>Text</td><td></td></tr><tr><td>Nachname</td><td>Text</td><td></td></tr><tr><td>Straße</td><td>Text</td><td></td></tr><tr><td>PLZ</td><td>Text</td><td>Als Text, nicht als Zahl – führende Nullen</td></tr><tr><td>Ort</td><td>Text</td><td></td></tr><tr><td>E-Mail</td><td>Text</td><td>Für automatische Benachrichtigungen</td></tr><tr><td>Telefon</td><td>Text</td><td></td></tr><tr><td>Geburtsdatum</td><td>Datum</td><td>Basis für Altersklassen und Jubiläen</td></tr><tr><td>Eintrittsdatum</td><td>Datum</td><td></td></tr><tr><td>Austrittsdatum</td><td>Datum</td><td>Leer = aktives Mitglied</td></tr><tr><td>Status</td><td>Auswahl</td><td>Aktiv, Passiv, Ausgetreten, Ehrenmitglied</td></tr><tr><td>Beitragsart</td><td>Auswahl</td><td>Vollzahler, Ermäßigt, Familie, Förderer</td></tr><tr><td>Einwilligung Fotos</td><td>Umschalter</td><td>DSGVO-Nachweis</td></tr><tr><td>Notizen</td><td>Text</td><td></td></tr></tbody></table>
+<p>Zwei Hinweise aus der Praxis:</p>
+<p><strong>PLZ als Text</strong>, nicht als Zahl. Sonst verschwindet die führende Null bei allen ostdeutschen Postleitzahlen.</p>
+<p><strong>Austrittsdatum statt Löschen.</strong> Wer austritt, wird nicht gelöscht, sondern bekommt ein Austrittsdatum und den Status „Ausgetreten”. Sie brauchen die Historie für die Beitragsabrechnung und für steuerliche Nachweise. Erst nach Ablauf der Aufbewahrungsfristen wird tatsächlich gelöscht – dazu unten mehr.</p>
+<h2 id="schritt-2-abteilungen-anlegen">Schritt 2: Abteilungen anlegen</h2>
+<p>Das zweite Grid ist schnell erstellt. <strong>Abteilungen</strong> braucht typischerweise nur:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Feld</th><th>Typ</th></tr></thead><tbody><tr><td>Abteilungsname</td><td>Text</td></tr><tr><td>Beschreibung</td><td>Text</td></tr><tr><td>Gründungsjahr</td><td>Zahl</td></tr><tr><td>Abteilungsleitung</td><td>Text</td></tr><tr><td>Trainingsort</td><td>Text</td></tr></tbody></table>
+<p>Der Trainingsort lohnt sich, wenn Ihr Verein an mehreren Standorten aktiv ist – damit lässt sich später die Kartenansicht nutzen.</p>
+<h2 id="schritt-3-mitgliedschaften-verknüpfen">Schritt 3: Mitgliedschaften verknüpfen</h2>
+<p>Jetzt kommt der Schritt, der aus drei Listen eine Datenbank macht. Legen Sie ein Grid <strong>Mitgliedschaften</strong> an mit diesen Feldern:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Feld</th><th>Typ</th><th>Verknüpft mit</th></tr></thead><tbody><tr><td>Mitglied</td><td>Verknüpfung</td><td>Grid „Mitglieder”</td></tr><tr><td>Abteilung</td><td>Verknüpfung</td><td>Grid „Abteilungen”</td></tr><tr><td>Rolle</td><td>Auswahl</td><td>Sportler/in, Trainer/in, Betreuer/in, Leitung</td></tr><tr><td>Beitrittsdatum Abteilung</td><td>Datum</td><td></td></tr><tr><td>Aktiv</td><td>Umschalter</td><td></td></tr></tbody></table>
+<p>Verknüpfungsfelder sind der Kern des Ganzen. Statt einen Namen abzutippen, wählen Sie bei der Eingabe aus einer Liste der vorhandenen Mitglieder aus. Ändert sich später der Nachname – Heirat, Namensänderung –, ändern Sie ihn genau einmal im Mitglieder-Grid. Überall sonst aktualisiert er sich mit.</p>
+<p>Das ist der Punkt, an dem Excel strukturell verliert: Dort müsste jemand alle Vorkommen suchen und ersetzen. Und einen davon vergessen.</p>
+<figure>
+<div style="overflow-x:auto;-webkit-overflow-scrolling:touch">
+<svg viewBox="0 0 720 352" role="img" aria-labelledby="dm-title dm-desc" style="width:100%;min-width:660px;height:auto;font-family:Inter,system-ui,sans-serif">
+  <title id="dm-title">Datenmodell einer Vereinsverwaltung</title>
+  <desc id="dm-desc">Drei verknüpfte Grids: Das Grid Mitgliedschaften verweist über zwei Verknüpfungsfelder auf die Grids Mitglieder und Abteilungen und bildet so die Mehrfachzugehörigkeit ab.</desc>
+  <defs>
+    <marker id="dm-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#d97706"></path>
+    </marker>
+    <clipPath id="dm-clipA"><rect x="20" y="84" width="190" height="222" rx="10"></rect></clipPath>
+    <clipPath id="dm-clipB"><rect x="265" y="84" width="190" height="222" rx="10"></rect></clipPath>
+    <clipPath id="dm-clipC"><rect x="510" y="120" width="190" height="186" rx="10"></rect></clipPath>
+  </defs>
+  <text x="20" y="44" font-size="22" font-weight="700" fill="#111827">Ein Mitglied, mehrere Abteilungen</text>
+  <line x1="261" y1="144" x2="218" y2="144" stroke="#d97706" stroke-width="2.5" marker-end="url(#dm-arrow)"></line>
+  <line x1="459" y1="180" x2="502" y2="180" stroke="#d97706" stroke-width="2.5" marker-end="url(#dm-arrow)"></line>
+  <g clip-path="url(#dm-clipA)">
+    <rect x="20" y="84" width="190" height="222" fill="#ffffff"></rect>
+    <rect x="20" y="126" width="190" height="36" fill="#fef3c7"></rect>
+    <rect x="20" y="84" width="190" height="42" fill="#1251a3"></rect>
+    <text x="35" y="110" font-size="15" font-weight="700" fill="#ffffff">Mitglieder</text>
+    <text x="35" y="149" font-size="13.5" font-weight="600" fill="#92400e">Mitgliedsnummer</text>
+    <text x="195" y="149" font-size="11" fill="#b45309" text-anchor="end">Zahl</text>
+    <text x="35" y="185" font-size="13.5" fill="#374151">Vorname</text>
+    <text x="195" y="185" font-size="11" fill="#9ca3af" text-anchor="end">Text</text>
+    <text x="35" y="221" font-size="13.5" fill="#374151">Nachname</text>
+    <text x="195" y="221" font-size="11" fill="#9ca3af" text-anchor="end">Text</text>
+    <text x="35" y="257" font-size="13.5" fill="#374151">Geburtsdatum</text>
+    <text x="195" y="257" font-size="11" fill="#9ca3af" text-anchor="end">Datum</text>
+    <text x="35" y="293" font-size="13.5" fill="#374151">Status</text>
+    <text x="195" y="293" font-size="11" fill="#9ca3af" text-anchor="end">Auswahl</text>
+    <g stroke="#f3f4f6" stroke-width="1">
+      <line x1="20" y1="162" x2="210" y2="162"></line><line x1="20" y1="198" x2="210" y2="198"></line>
+      <line x1="20" y1="234" x2="210" y2="234"></line><line x1="20" y1="270" x2="210" y2="270"></line>
+    </g>
+  </g>
+  <rect x="20" y="84" width="190" height="222" rx="10" fill="none" stroke="#e5e7eb" stroke-width="1.5"></rect>
+  <g clip-path="url(#dm-clipB)">
+    <rect x="265" y="84" width="190" height="222" fill="#ffffff"></rect>
+    <rect x="265" y="126" width="190" height="72" fill="#fef3c7"></rect>
+    <rect x="265" y="84" width="190" height="42" fill="#1251a3"></rect>
+    <text x="280" y="110" font-size="15" font-weight="700" fill="#ffffff">Mitgliedschaften</text>
+    <text x="280" y="149" font-size="13.5" font-weight="600" fill="#92400e">Mitglied</text>
+    <text x="440" y="149" font-size="11" fill="#b45309" text-anchor="end">Verknüpfung</text>
+    <text x="280" y="185" font-size="13.5" font-weight="600" fill="#92400e">Abteilung</text>
+    <text x="440" y="185" font-size="11" fill="#b45309" text-anchor="end">Verknüpfung</text>
+    <text x="280" y="221" font-size="13.5" fill="#374151">Rolle</text>
+    <text x="440" y="221" font-size="11" fill="#9ca3af" text-anchor="end">Auswahl</text>
+    <text x="280" y="257" font-size="13.5" fill="#374151">Beitrittsdatum</text>
+    <text x="440" y="257" font-size="11" fill="#9ca3af" text-anchor="end">Datum</text>
+    <text x="280" y="293" font-size="13.5" fill="#374151">Aktiv</text>
+    <text x="440" y="293" font-size="11" fill="#9ca3af" text-anchor="end">Umschalter</text>
+    <g stroke="#f3f4f6" stroke-width="1">
+      <line x1="265" y1="162" x2="455" y2="162"></line><line x1="265" y1="198" x2="455" y2="198"></line>
+      <line x1="265" y1="234" x2="455" y2="234"></line><line x1="265" y1="270" x2="455" y2="270"></line>
+    </g>
+  </g>
+  <rect x="265" y="84" width="190" height="222" rx="10" fill="none" stroke="#e5e7eb" stroke-width="1.5"></rect>
+  <g clip-path="url(#dm-clipC)">
+    <rect x="510" y="120" width="190" height="186" fill="#ffffff"></rect>
+    <rect x="510" y="162" width="190" height="36" fill="#fef3c7"></rect>
+    <rect x="510" y="120" width="190" height="42" fill="#1251a3"></rect>
+    <text x="525" y="146" font-size="15" font-weight="700" fill="#ffffff">Abteilungen</text>
+    <text x="525" y="185" font-size="13.5" font-weight="600" fill="#92400e">Abteilungsname</text>
+    <text x="685" y="185" font-size="11" fill="#b45309" text-anchor="end">Text</text>
+    <text x="525" y="221" font-size="13.5" fill="#374151">Beschreibung</text>
+    <text x="685" y="221" font-size="11" fill="#9ca3af" text-anchor="end">Text</text>
+    <text x="525" y="257" font-size="13.5" fill="#374151">Gründungsjahr</text>
+    <text x="685" y="257" font-size="11" fill="#9ca3af" text-anchor="end">Zahl</text>
+    <text x="525" y="293" font-size="13.5" fill="#374151">Trainingsort</text>
+    <text x="685" y="293" font-size="11" fill="#9ca3af" text-anchor="end">Text</text>
+    <g stroke="#f3f4f6" stroke-width="1">
+      <line x1="510" y1="198" x2="700" y2="198"></line><line x1="510" y1="234" x2="700" y2="234"></line>
+      <line x1="510" y1="270" x2="700" y2="270"></line>
+    </g>
+  </g>
+  <rect x="510" y="120" width="190" height="186" rx="10" fill="none" stroke="#e5e7eb" stroke-width="1.5"></rect>
+  <text x="360" y="338" font-size="11.5" fill="#6b7280" text-anchor="middle">Eine Zeile in „Mitgliedschaften“ = eine Zugehörigkeit. Drei Abteilungen, drei Zeilen – aber nur ein Stammdatensatz.</text>
+</svg>
+</div>
+<figcaption>Über Verknüpfungsfelder stellen Sie in ApptiveGrid die Beziehungen zwischen Grids her. Die gelb hinterlegten Felder tragen die Verbindung.</figcaption>
+</figure>
+<h2 id="schritt-4-ansichten-für-unterschiedliche-aufgaben">Schritt 4: Ansichten für unterschiedliche Aufgaben</h2>
+<p>Die Daten liegen jetzt sauber. Jetzt kommt der Teil, den die Tabellenkalkulation gar nicht kennt: Dieselben Daten, unterschiedlich dargestellt – je nachdem, wer damit arbeitet.</p>
+<p><strong>Grid-Ansicht</strong> für den Schriftführer: alle Stammdaten, sortiert nach Nachname.</p>
+<p><strong>Kanban-Ansicht</strong> nach Status: Aufnahmeanträge, aktive Mitglieder, Kündigungen in Bearbeitung – der Vorstand sieht auf einen Blick, was zu tun ist.</p>
+<p><strong>Kalender-Ansicht</strong> für Geburtstage und Jubiläen. Wer runden Geburtstag hat oder 25 Jahre dabei ist, taucht automatisch auf. Kein Vorstand muss mehr Listen durchsuchen, um Ehrungen vorzubereiten.</p>
+<p><strong>Karten-Ansicht</strong> für die Trainingsstätten oder das Einzugsgebiet der Mitglieder – hilfreich bei der Planung von Standorten und Fahrgemeinschaften.</p>
+<p><strong>Gefilterte Ansichten pro Abteilung</strong>, damit jeder Abteilungsleiter genau seine Gruppe sieht – und nur diese.</p>
+<p>Wichtig: Es handelt sich immer um dieselben Daten. Sie werden nicht kopiert, sondern nur anders angezeigt. Genau das ist der Unterschied zu fünf Excel-Dateien, die irgendwann auseinanderlaufen.</p>
+<h2 id="schritt-5-der-aufnahmeantrag-als-formular">Schritt 5: Der Aufnahmeantrag als Formular</h2>
+<p>Hier verlässt die Vereinsverwaltung endgültig das Tabellendenken.</p>
+<p>Erstellen Sie aus dem Mitglieder-Grid ein Formular für die Neuaufnahme. Sie wählen aus, welche Felder das Formular zeigt – Name, Adresse, Kontakt, Wunsch-Abteilung, Einwilligungen – und blenden die internen Felder aus, die niemanden von außen etwas angehen.</p>
+<p>Dieses Formular verlinken Sie auf der Vereinswebsite oder verteilen es als QR-Code beim Sommerfest, beim Schnuppertraining und am Infostand.</p>
+<p>Was dann passiert: Der Interessent füllt das Formular auf dem Handy aus. Der Datensatz landet direkt in Ihrer Datenbank – mit dem Status „Antrag eingegangen”. Niemand tippt etwas ab, niemand entziffert Handschrift, niemand verliert einen Papierzettel.</p>
+<p>Zwei Dinge, die Sie im Formular gleich mit erledigen sollten:</p>
+<ul>
+<li><strong>Die datenschutzrechtliche Einwilligung</strong> als Pflichtfeld – dokumentiert und nachweisbar, statt später mühsam eingesammelt.</li>
+<li><strong>Die Fotoeinwilligung</strong> als getrenntes, freiwilliges Feld. Sie muss separat und optional sein, sonst ist sie unwirksam.</li>
+</ul>
+<p>Für die SEPA-Lastschrift empfiehlt sich ein eigener Schritt: Das Mandat braucht in vielen Konstellationen eine Unterschrift, und Bankdaten sollten Sie ohnehin nur dort erfassen, wo es wirklich nötig ist.</p>
+<h2 id="schritt-6-wiederkehrende-arbeit-automatisieren">Schritt 6: Wiederkehrende Arbeit automatisieren</h2>
+<p>Vereinsarbeit ist Ehrenamt. Jede Stunde, die nicht in Verwaltung fließt, fließt in den Verein. Deshalb lohnt es sich, die immer gleichen Abläufe zu automatisieren:</p>
+<ul>
+<li><strong>Willkommensnachricht:</strong> Geht ein Aufnahmeantrag ein, erhält der Vorstand eine Benachrichtigung – und das neue Mitglied eine Bestätigung.</li>
+<li><strong>Beitragserinnerung:</strong> Vor dem Einzugstermin werden alle aktiven Mitglieder informiert.</li>
+<li><strong>Jubiläumsmeldung:</strong> Der Vorstand bekommt rechtzeitig eine Liste anstehender Ehrungen, statt sie kurz vor der Jahreshauptversammlung zusammenzusuchen.</li>
+<li><strong>Austrittsverarbeitung:</strong> Wird ein Austrittsdatum eingetragen, wechselt der Status automatisch und die Abteilungsleitung wird informiert.</li>
+<li><strong>Übergang in die nächste Altersklasse:</strong> Bei Jugendabteilungen ein echter Zeitfresser – und vollständig automatisierbar.</li>
+</ul>
+<p>Diese Abläufe bauen Sie im Workflow-Editor zusammen, ohne eine Zeile Code. Und weil die Regeln in der Plattform hinterlegt sind und nicht im Kopf einer einzelnen Person, funktionieren sie auch nach dem nächsten Vorstandswechsel weiter.</p>
+<h2 id="schritt-7-die-mitglieder-mitnehmen">Schritt 7: Die Mitglieder mitnehmen</h2>
+<p>Ein Punkt, an dem viele Vereinsprojekte scheitern: Die Verwaltung ist digitalisiert, aber die Mitglieder merken nichts davon. Sie bekommen weiterhin Rundmails und WhatsApp-Nachrichten aus fünf verschiedenen Gruppen.</p>
+<p>Mit ApptiveTeams stellen Sie Ihren Mitgliedern und Abteilungsleitern eine App zur Verfügung, über die sie genau das sehen, was für sie relevant ist: Trainingszeiten, Termine, Formulare, Ansprechpartner. Änderungen ihrer eigenen Kontaktdaten können Mitglieder selbst melden – und Sie hinterherlaufen niemandem mehr wegen einer neuen Adresse.</p>
+<p>Für Externe – etwa Kooperationspartner oder Übungsleiter ohne Vereinszugang – lassen sich Portale einrichten, die einen begrenzten Ausschnitt der Daten zeigen.</p>
+<h2 id="dsgvo-im-verein-die-punkte-die-wirklich-zählen">DSGVO im Verein: die Punkte, die wirklich zählen</h2>
+<p>Vereine unterliegen der DSGVO vollständig. Ehrenamt schützt nicht vor Bußgeldern. Die gute Nachricht: Mit einer strukturierten Datenbank sind die Anforderungen deutlich leichter zu erfüllen als mit verteilten Excel-Dateien.</p>
+<p><strong>Serverstandort.</strong> ApptiveGrid wird in Deutschland gehostet und unterliegt europäischem Recht. Ein Auftragsverarbeitungsvertrag nach deutschem Recht ist inklusive – bei US-Anbietern regelmäßig der schwierigste Punkt.</p>
+<p><strong>Zugriffsrechte.</strong> Der Abteilungsleiter Fußball braucht die Kontaktdaten seiner Gruppe. Er braucht nicht die Bankverbindungen der Schachabteilung. Mit differenzierten Rechten und gefilterten Ansichten setzen Sie Datenminimierung praktisch um, statt sie nur zu versprechen.</p>
+<p><strong>Auskunftsrecht.</strong> Fragt ein Mitglied nach Artikel 15 DSGVO, welche Daten gespeichert sind, filtern Sie auf den Datensatz und haben die Antwort. Bei verteilten Tabellen bedeutet dieselbe Anfrage einen Nachmittag Suchen – mit unsicherem Ergebnis.</p>
+<p><strong>Löschkonzept.</strong> Nach Austritt gelten Aufbewahrungsfristen, insbesondere für steuerlich relevante Unterlagen. Mit einem Austrittsdatum im Datensatz lässt sich eine Ansicht bauen, die alle Datensätze zeigt, deren Frist abgelaufen ist. Löschen wird damit zu einem geplanten Vorgang statt zu einem vergessenen.</p>
+<p><strong>Besondere Kategorien.</strong> Gesundheitsdaten – Atteste, Einschränkungen, Unverträglichkeiten bei Freizeiten – unterliegen Artikel 9 DSGVO und damit strengeren Anforderungen. Erfassen Sie sie nur, wenn Sie sie wirklich brauchen, und beschränken Sie den Zugriff auf die Personen, die sie tatsächlich benötigen.</p>
+<p>Ein Hinweis in eigener Sache: Das sind praktische Orientierungspunkte, keine Rechtsberatung. Bei Vereinen mit umfangreicher Datenverarbeitung lohnt der Blick eines Fachkundigen – die Investition ist überschaubar.</p>
+<h2 id="wie-es-weitergeht-typische-ausbaustufen">Wie es weitergeht: typische Ausbaustufen</h2>
+<p>Das Grundgerüst steht nach wenigen Stunden. Danach wächst die Lösung mit dem, was Ihr Verein braucht:</p>
+<ul>
+<li><strong>Beiträge und Zahlungen</strong> als eigenes Grid, verknüpft mit den Mitgliedern – inklusive offener Posten</li>
+<li><strong>Veranstaltungen und Anmeldungen</strong> – Sommerfest, Vereinsausflug, Turnier, jeweils mit Formular</li>
+<li><strong>Inventar und Geräte</strong> – wer hat welchen Vereinsschlüssel, welches Trikot, welches Boot</li>
+<li><strong>Übungsleiterqualifikationen</strong> mit Ablaufdaten – und automatischer Erinnerung vor Ablauf der Lizenz</li>
+<li><strong>Ehrungen und Jubiläen</strong> als eigene Historie</li>
+<li><strong>Protokolle und Beschlüsse</strong> der Vorstandssitzungen, durchsuchbar statt im Ordner</li>
+</ul>
+<p>Der Vorteil des schrittweisen Vorgehens: Sie müssen nicht alles auf einmal planen. Anders als bei einer fertig gekauften Vereinssoftware sind Sie nicht darauf angewiesen, dass der Hersteller Ihre Besonderheit vorgesehen hat. Ein zusätzliches Feld ist eine Sache von Sekunden.</p>
+<h2 id="womit-anfangen">Womit anfangen?</h2>
+<p>Der häufigste Fehler bei Digitalisierungsprojekten im Verein ist, zu groß zu starten. Ein Vorstand nimmt sich vor, alles auf einmal abzubilden – und nach drei Sitzungen liegt das Projekt.</p>
+<p>Der bessere Weg:</p>
+<ol>
+<li><strong>Mitgliederstammdaten importieren.</strong> Ihre bestehende Excel-Liste laden Sie hoch – das ist eine Sache von Minuten und der Beweis, dass es funktioniert.</li>
+<li><strong>Abteilungen und Mitgliedschaften ergänzen.</strong> Damit haben Sie das relationale Grundgerüst.</li>
+<li><strong>Ein einziges Formular live schalten.</strong> Am besten den Aufnahmeantrag. Das ist der sichtbarste Nutzen für die Mitglieder – und der stärkste Beleg im Vorstand, dass sich der Aufwand lohnt.</li>
+<li><strong>Erst dann automatisieren.</strong> Wenn die Daten sauber sind, folgen die Workflows fast von selbst.</li>
+</ol>
+<p>Mit dem kostenlosen Starter-Tarif können Sie das Modell in Ruhe aufbauen und ausprobieren. Für den laufenden Betrieb eines Vereins mit unbegrenzter Nutzerzahl und größeren Mitgliederbeständen sprechen Sie uns an – für gemeinnützige Organisationen finden wir in der Regel eine passende Lösung.</p>
+<h2 id="fazit">Fazit</h2>
+<p>Eine Vereinsverwaltung ist kein Datenbankprojekt. Sie ist der Versuch, ehrenamtliche Arbeit von Verwaltungsaufwand zu befreien.</p>
+<p>Die Excel-Liste hat lange gereicht, weil Vereine überschaubar waren und niemand nach Datenschutz gefragt hat. Beides hat sich geändert. Mehrfachmitgliedschaften, Auskunftsrechte, Vorstandswechsel und die Erwartung der Mitglieder, Dinge per Handy zu erledigen, sprengen das Tabellenformat.</p>
+<p>Was es braucht, ist keine teure Speziallösung mit Funktionen, die Ihr Verein nie nutzt – sondern eine Struktur, die zu Ihrem Verein passt und mit ihm wächst.</p>
+<p><a href="https://app.apptivegrid.de/register">ApptiveGrid kostenlos testen</a> oder <a href="https://meetings.hubspot.com/apptivegrid">im Gespräch klären, wie Ihr Verein starten kann</a>.</p> </div> <!-- Back to blog --> <div class="mt-12 pt-8 border-t border-gray-100"> <a href="/apptivegrid-website-staging/en/blog" class="text-brand-600 hover:text-brand-700 font-medium flex items-center gap-2">
+← Back to blog
+</a> </div> </div> </article>  <section class="bg-gray-50 py-16"> <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center"> <h2 class="text-2xl font-bold text-gray-900">Want to try it yourself?</h2> <p class="mt-3 text-gray-600">Start for free with ApptiveGrid and build your own solution.</p> <div class="mt-6 flex flex-col sm:flex-row gap-4 justify-center"> <a href="https://app.apptivegrid.de/register" class="btn-primary">Get started free</a> <a href="/apptivegrid-website-staging/en/consulting" class="btn-secondary">Request consulting</a> </div> </div> </section>  </main> <footer class="bg-gray-900 text-gray-300"> <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16"> <div class="grid grid-cols-2 lg:grid-cols-5 gap-8"> <!-- Brand --> <div class="col-span-2 lg:col-span-1"> <a href="/apptivegrid-website-staging/en/" class="flex items-center"> <img src="/apptivegrid-website-staging/logo-dark.svg" alt="ApptiveGrid" class="h-8 w-auto max-w-none" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"> <span class="text-xl font-bold text-white" style="display:none">ApptiveGrid</span> </a> <p class="mt-3 text-sm text-gray-400 leading-relaxed"> No-code platform for custom business applications. Made in Germany. </p> <div class="flex gap-4 mt-4"> <a href="https://www.linkedin.com/company/apptivegrid" target="_blank" rel="noopener" aria-label="LinkedIn" class="text-gray-400 hover:text-white transition-colors"> <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"> <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path> </svg> </a> <a href="https://www.youtube.com/channel/UC96XdQD_cjSi2Udfa7fb6aA" target="_blank" rel="noopener" aria-label="YouTube" class="text-gray-400 hover:text-white transition-colors"> <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"> <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path> </svg> </a> </div> </div> <!-- Product --> <div> <h3 class="text-white font-semibold text-sm uppercase tracking-wide mb-4"> Product </h3> <ul class="space-y-3 text-sm"> <li><a href="/apptivegrid-website-staging/en/features" class="hover:text-white transition-colors">Features</a></li>  <li><a href="/apptivegrid-website-staging/en/consulting" class="hover:text-white transition-colors">Consulting</a></li> <li><a href="/apptivegrid-website-staging/en/employee-app" class="hover:text-white transition-colors">Employee App</a></li> <li><a href="/apptivegrid-website-staging/en/integrations" class="hover:text-white transition-colors">Integrations</a></li> <li><a href="/apptivegrid-website-staging/en/pricing" class="hover:text-white transition-colors">Pricing</a></li> </ul> </div> <!-- Resources --> <div> <h3 class="text-white font-semibold text-sm uppercase tracking-wide mb-4"> Resources </h3> <ul class="space-y-3 text-sm"> <li><a href="/apptivegrid-website-staging/en/blog" class="hover:text-white transition-colors">Blog</a></li> <li><a href="https://intercom.help/apptivegrid/de/" target="_blank" rel="noopener" class="hover:text-white transition-colors">Help Center</a></li> <li><a href="mailto:support@apptivegrid.de" class="hover:text-white transition-colors">Support</a></li> <li><a href="/apptivegrid-website-staging/en/developer" class="hover:text-white transition-colors">Developer</a></li> <li><a href="/apptivegrid-website-staging/en/tutorials" class="hover:text-white transition-colors">Tutorials</a></li> </ul> </div> <!-- Company --> <div> <h3 class="text-white font-semibold text-sm uppercase tracking-wide mb-4"> Company </h3> <ul class="space-y-3 text-sm"> <li><a href="/apptivegrid-website-staging/en/about" class="hover:text-white transition-colors">About us</a></li> <li><a href="/apptivegrid-website-staging/en/partner" class="hover:text-white transition-colors">Partners</a></li> </ul> </div> <!-- Legal --> <div> <h3 class="text-white font-semibold text-sm uppercase tracking-wide mb-4"> Legal </h3> <ul class="space-y-3 text-sm"> <li><a href="/apptivegrid-website-staging/datenschutz" class="hover:text-white transition-colors">Privacy Policy</a></li> <li><a href="/apptivegrid-website-staging/agb" class="hover:text-white transition-colors">Terms &amp; Conditions</a></li> <li><a href="/apptivegrid-website-staging/impressum" class="hover:text-white transition-colors">Imprint</a></li> <li><a href="/apptivegrid-website-staging/en/abuse" class="hover:text-white transition-colors">Report Abuse</a></li>  </ul> </div> </div> <div class="mt-12 pt-8 border-t border-gray-800 flex flex-col sm:flex-row justify-between items-center gap-4"> <p class="text-sm text-gray-400">
+© 2026 ApptiveGrid GmbH. All rights reserved. </p> <p class="text-sm text-gray-500 flex items-center gap-1"> <svg class="w-4 h-4 text-gray-500" fill="currentColor" viewBox="0 0 20 20"> <path fill-rule="evenodd" d="M10 1.944A11.954 11.954 0 012.166 5C2.056 5.649 2 6.319 2 7c0 5.225 3.34 9.67 8 11.317C14.66 16.67 18 12.225 18 7c0-.682-.057-1.35-.166-2.001A11.954 11.954 0 0110 1.944zM11 14a1 1 0 11-2 0 1 1 0 012 0zm0-7a1 1 0 10-2 0v3a1 1 0 102 0V7z" clip-rule="evenodd"></path> </svg>
+Made in Germany · GDPR-compliant </p> </div> </div> </footer> </body></html>

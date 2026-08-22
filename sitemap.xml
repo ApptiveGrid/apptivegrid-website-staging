@@ -640,6 +640,24 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://apptivegrid.github.io/apptivegrid-website-staging/post/top-10-anwendungsfalle-von-apptivegrid-in-unternehmen/" />
   </url>
   <url>
+    <loc>https://apptivegrid.github.io/apptivegrid-website-staging/post/vereinsverwaltung-digitalisieren/</loc>
+    <lastmod>2026-08-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://apptivegrid.github.io/apptivegrid-website-staging/post/vereinsverwaltung-digitalisieren/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://apptivegrid.github.io/apptivegrid-website-staging/en/post/vereinsverwaltung-digitalisieren/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://apptivegrid.github.io/apptivegrid-website-staging/post/vereinsverwaltung-digitalisieren/" />
+  </url>
+  <url>
+    <loc>https://apptivegrid.github.io/apptivegrid-website-staging/en/post/vereinsverwaltung-digitalisieren/</loc>
+    <lastmod>2026-08-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://apptivegrid.github.io/apptivegrid-website-staging/post/vereinsverwaltung-digitalisieren/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://apptivegrid.github.io/apptivegrid-website-staging/en/post/vereinsverwaltung-digitalisieren/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://apptivegrid.github.io/apptivegrid-website-staging/post/vereinsverwaltung-digitalisieren/" />
+  </url>
+  <url>
     <loc>https://apptivegrid.github.io/apptivegrid-website-staging/post/was-bedeutet-no-code/</loc>
     <lastmod>2023-11-20</lastmod>
     <changefreq>monthly</changefreq>
