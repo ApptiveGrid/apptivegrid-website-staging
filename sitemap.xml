@@ -33,6 +33,102 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://apptivegrid.github.io/apptivegrid-website-staging/features/" />
   </url>
   <url>
+    <loc>https://apptivegrid.github.io/apptivegrid-website-staging/features/datenbank/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://apptivegrid.github.io/apptivegrid-website-staging/features/datenbank/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://apptivegrid.github.io/apptivegrid-website-staging/en/features/database/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://apptivegrid.github.io/apptivegrid-website-staging/features/datenbank/" />
+  </url>
+  <url>
+    <loc>https://apptivegrid.github.io/apptivegrid-website-staging/en/features/database/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://apptivegrid.github.io/apptivegrid-website-staging/features/datenbank/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://apptivegrid.github.io/apptivegrid-website-staging/en/features/database/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://apptivegrid.github.io/apptivegrid-website-staging/features/datenbank/" />
+  </url>
+  <url>
+    <loc>https://apptivegrid.github.io/apptivegrid-website-staging/features/formulare/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://apptivegrid.github.io/apptivegrid-website-staging/features/formulare/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://apptivegrid.github.io/apptivegrid-website-staging/en/features/forms/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://apptivegrid.github.io/apptivegrid-website-staging/features/formulare/" />
+  </url>
+  <url>
+    <loc>https://apptivegrid.github.io/apptivegrid-website-staging/en/features/forms/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://apptivegrid.github.io/apptivegrid-website-staging/features/formulare/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://apptivegrid.github.io/apptivegrid-website-staging/en/features/forms/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://apptivegrid.github.io/apptivegrid-website-staging/features/formulare/" />
+  </url>
+  <url>
+    <loc>https://apptivegrid.github.io/apptivegrid-website-staging/features/portale/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://apptivegrid.github.io/apptivegrid-website-staging/features/portale/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://apptivegrid.github.io/apptivegrid-website-staging/en/features/portals/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://apptivegrid.github.io/apptivegrid-website-staging/features/portale/" />
+  </url>
+  <url>
+    <loc>https://apptivegrid.github.io/apptivegrid-website-staging/en/features/portals/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://apptivegrid.github.io/apptivegrid-website-staging/features/portale/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://apptivegrid.github.io/apptivegrid-website-staging/en/features/portals/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://apptivegrid.github.io/apptivegrid-website-staging/features/portale/" />
+  </url>
+  <url>
+    <loc>https://apptivegrid.github.io/apptivegrid-website-staging/features/automatisierung/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://apptivegrid.github.io/apptivegrid-website-staging/features/automatisierung/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://apptivegrid.github.io/apptivegrid-website-staging/en/features/automation/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://apptivegrid.github.io/apptivegrid-website-staging/features/automatisierung/" />
+  </url>
+  <url>
+    <loc>https://apptivegrid.github.io/apptivegrid-website-staging/en/features/automation/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://apptivegrid.github.io/apptivegrid-website-staging/features/automatisierung/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://apptivegrid.github.io/apptivegrid-website-staging/en/features/automation/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://apptivegrid.github.io/apptivegrid-website-staging/features/automatisierung/" />
+  </url>
+  <url>
+    <loc>https://apptivegrid.github.io/apptivegrid-website-staging/features/freigaben/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://apptivegrid.github.io/apptivegrid-website-staging/features/freigaben/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://apptivegrid.github.io/apptivegrid-website-staging/en/features/approvals/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://apptivegrid.github.io/apptivegrid-website-staging/features/freigaben/" />
+  </url>
+  <url>
+    <loc>https://apptivegrid.github.io/apptivegrid-website-staging/en/features/approvals/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://apptivegrid.github.io/apptivegrid-website-staging/features/freigaben/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://apptivegrid.github.io/apptivegrid-website-staging/en/features/approvals/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://apptivegrid.github.io/apptivegrid-website-staging/features/freigaben/" />
+  </url>
+  <url>
+    <loc>https://apptivegrid.github.io/apptivegrid-website-staging/features/ki-workflows/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://apptivegrid.github.io/apptivegrid-website-staging/features/ki-workflows/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://apptivegrid.github.io/apptivegrid-website-staging/en/features/ai-workflows/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://apptivegrid.github.io/apptivegrid-website-staging/features/ki-workflows/" />
+  </url>
+  <url>
+    <loc>https://apptivegrid.github.io/apptivegrid-website-staging/en/features/ai-workflows/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://apptivegrid.github.io/apptivegrid-website-staging/features/ki-workflows/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://apptivegrid.github.io/apptivegrid-website-staging/en/features/ai-workflows/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://apptivegrid.github.io/apptivegrid-website-staging/features/ki-workflows/" />
+  </url>
+  <url>
     <loc>https://apptivegrid.github.io/apptivegrid-website-staging/preise/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
