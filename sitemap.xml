@@ -369,6 +369,11 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://apptivegrid.github.io/apptivegrid-website-staging/abuse/" />
   </url>
   <url>
+    <loc>https://apptivegrid.github.io/apptivegrid-website-staging/karriere/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://apptivegrid.github.io/apptivegrid-website-staging/vorlagen/alle/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -392,6 +397,24 @@
     <loc>https://apptivegrid.github.io/apptivegrid-website-staging/auftragsverarbeitung/</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://apptivegrid.github.io/apptivegrid-website-staging/karriere/no-code-consultant/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://apptivegrid.github.io/apptivegrid-website-staging/karriere/vertrieb-marketing/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://apptivegrid.github.io/apptivegrid-website-staging/karriere/werkstudent-vertrieb/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://apptivegrid.github.io/apptivegrid-website-staging/post/apptivegrid-zukunft-ki-coding-agenten/</loc>
