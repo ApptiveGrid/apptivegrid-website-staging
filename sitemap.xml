@@ -321,19 +321,35 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://apptivegrid.github.io/apptivegrid-website-staging/developer/" />
   </url>
   <url>
-    <loc>https://apptivegrid.github.io/apptivegrid-website-staging/get-apptiveteams/</loc>
+    <loc>https://apptivegrid.github.io/apptivegrid-website-staging/apptiveteams/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://apptivegrid.github.io/apptivegrid-website-staging/get-apptiveteams/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://apptivegrid.github.io/apptivegrid-website-staging/apptiveteams/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://apptivegrid.github.io/apptivegrid-website-staging/en/employee-app/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://apptivegrid.github.io/apptivegrid-website-staging/get-apptiveteams/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://apptivegrid.github.io/apptivegrid-website-staging/apptiveteams/" />
   </url>
   <url>
     <loc>https://apptivegrid.github.io/apptivegrid-website-staging/en/employee-app/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://apptivegrid.github.io/apptivegrid-website-staging/get-apptiveteams/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://apptivegrid.github.io/apptivegrid-website-staging/apptiveteams/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://apptivegrid.github.io/apptivegrid-website-staging/en/employee-app/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://apptivegrid.github.io/apptivegrid-website-staging/apptiveteams/" />
+  </url>
+  <url>
+    <loc>https://apptivegrid.github.io/apptivegrid-website-staging/get-apptiveteams/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://apptivegrid.github.io/apptivegrid-website-staging/get-apptiveteams/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://apptivegrid.github.io/apptivegrid-website-staging/en/get-apptiveteams/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://apptivegrid.github.io/apptivegrid-website-staging/get-apptiveteams/" />
+  </url>
+  <url>
+    <loc>https://apptivegrid.github.io/apptivegrid-website-staging/en/get-apptiveteams/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://apptivegrid.github.io/apptivegrid-website-staging/get-apptiveteams/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://apptivegrid.github.io/apptivegrid-website-staging/en/get-apptiveteams/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://apptivegrid.github.io/apptivegrid-website-staging/get-apptiveteams/" />
   </url>
   <url>
